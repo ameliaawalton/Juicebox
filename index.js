@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const server = express();
 const apiRouter = require('./api');
 const { client } = require('./db');
-const PORT = 3000;
+const { PORT = 3000 } = process.env
 
 server.use(morgan('dev'));
 server.use(bodyParser.json());
