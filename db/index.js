@@ -15,7 +15,7 @@ async function createUser({
       ON CONFLICT (username) DO NOTHING 
       RETURNING *;
     `, [username, password, name, location]);
-//test comment
+
     return user;
   } catch (error) {
     throw error;
